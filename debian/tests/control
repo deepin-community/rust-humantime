@@ -1,0 +1,14 @@
+Test-Command: /usr/share/cargo/bin/cargo-auto-test humantime 2.1.0 --all-targets --all-features
+Features: test-name=rust-humantime:@
+Depends: dh-cargo (>= 18), librust-chrono-0.4+default-dev, librust-rand-0.6+default-dev, librust-time-0.1+default-dev, @
+Restrictions: allow-stderr, skip-not-installable
+
+Test-Command: /usr/share/cargo/bin/cargo-auto-test humantime 2.1.0 --all-targets 
+Features: test-name=librust-humantime-dev:default
+Depends: dh-cargo (>= 18), librust-chrono-0.4+default-dev, librust-rand-0.6+default-dev, librust-time-0.1+default-dev, @
+Restrictions: allow-stderr, skip-not-installable
+
+Test-Command: /usr/share/cargo/bin/cargo-auto-test humantime 2.1.0 --all-targets --no-default-features
+Features: test-name=librust-humantime-dev:
+Depends: dh-cargo (>= 18), librust-chrono-0.4+default-dev, librust-rand-0.6+default-dev, librust-time-0.1+default-dev, @
+Restrictions: allow-stderr, skip-not-installable
